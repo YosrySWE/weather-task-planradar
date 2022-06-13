@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/content"
+    android:padding="16dp"
+    android:paddingVertical="4dp">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/cityNameHolder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_info"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageCityBuilding"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_city"
+            android:contentDescription="@string/city_icon_content_description" />
+
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_weight="1"
+            android:textAppearance="@style/CustomSubTitle"
+            tools:text="Cairo" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ImageView
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/iv_info"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cityNameHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cityNameHolder"
+        app:srcCompat="@drawable/ic_info"
+        android:contentDescription="@string/info_content_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

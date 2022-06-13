@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_cloud"
+        android:contentDescription="@string/info_content_description" />
+
+    <TextView
+        android:id="@+id/txtWeatherDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/very_dark_grayish_blue"
+        app:layout_constraintStart_toEndOf="@id/weatherIcon"
+        app:layout_constraintTop_toTopOf="@id/weatherIcon"
+        tools:text="5.01.2022 18:00" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/CustomSubTitle"
+        app:layout_constraintStart_toStartOf="@+id/txtWeatherDate"
+        app:layout_constraintTop_toBottomOf="@+id/txtWeatherDate"
+        tools:text="Cloudy, 20 C" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

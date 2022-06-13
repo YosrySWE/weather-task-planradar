@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/fragment_cities"
+    >
+
+    <fragment android:id="@+id/fragment_cities"
+        tools:layout="@layout/fragment_cities"
+        android:name="com.planradar.weatherapptask.presentation.features.cities.CitiesFragment">
+
+        <action
+            android:id="@+id/action_fragment_cities_to_dialog_search"
+            app:destination="@id/dialog_search" />
+        <action
+            android:id="@+id/action_fragment_cities_to_fragment_weather_history"
+            app:destination="@id/fragment_weather_history" />
+        <action
+            android:id="@+id/action_fragment_cities_to_fragment_details"
+            app:destination="@id/fragment_details"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment android:name="com.planradar.weatherapptask.presentation.features.weather_history.WeatherHistoryFragment"
+        tools:layout="@layout/fragment_weather_history"
+        android:id="@+id/fragment_weather_history">
+
+        <action
+            android:id="@+id/action_fragment_weather_history_to_fragment_details"
+            app:destination="@id/fragment_details" />
+        <argument
+            android:name="cityId"
+            app:argType="long" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment android:id="@+id/fragment_details"
+        tools:layout="@layout/fragment_details"
+        android:name="com.planradar.weatherapptask.presentation.features.details.DetailsFragment">
+        <argument
+            android:name="city"
+            app:argType="com.planradar.weatherapptask.domain.model.City"
+            app:nullable="true" />
+        <argument
+            android:name="weather"
+            app:argType="com.planradar.weatherapptask.domain.model.Weather"
+            app:nullable="true" />
+    </fragment>
+
+    <dialog android:id="@+id/dialog_search"
+        android:name="com.planradar.weatherapptask.presentation.features.search.SearchDialog"
+        tools:layout="@layout/dialog_search">
+
+    </dialog>
+</navigation>
