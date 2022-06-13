@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.planradar.weatherapptask.domain.model.City
 import com.planradar.weatherapptask.domain.model.Weather
-import com.planradar.weatherapptask.domain.usecases.GetWeatherUseCase
-import com.planradar.weatherapptask.domain.usecases.SaveWeatherLocalUserCase
+import com.planradar.weatherapptask.usecases.GetWeatherUseCase
+import com.planradar.weatherapptask.usecases.SaveWeatherLocalUserCase
 import com.planradar.weatherapptask.util.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job

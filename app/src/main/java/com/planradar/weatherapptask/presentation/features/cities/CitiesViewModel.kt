@@ -3,7 +3,7 @@ package com.planradar.weatherapptask.presentation.features.cities
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.planradar.weatherapptask.domain.usecases.GetSavedCitiesUseCase
+import com.planradar.weatherapptask.usecases.GetSavedCitiesUseCase
 import com.planradar.weatherapptask.util.Result.Error
 import com.planradar.weatherapptask.util.Result.Success
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,7 +16,7 @@ import javax.inject.Inject
 @HiltViewModel
 
 class CitiesViewModel @Inject constructor(
-    private val getSavedCitiesUseCase: GetSavedCitiesUseCase,
+    val getSavedCitiesUseCase: GetSavedCitiesUseCase,
 ) : ViewModel() {
 
     val intentChannel = Channel<CitiesIntent>(Channel.UNLIMITED)

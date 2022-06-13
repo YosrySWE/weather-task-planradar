@@ -1,6 +1,5 @@
-package com.planradar.weatherapptask.domain.usecases
+package com.planradar.weatherapptask.usecases
 
-import com.planradar.weatherapptask.domain.model.City
 import com.planradar.weatherapptask.domain.repository.CitiesRepository
 import com.planradar.weatherapptask.util.Result
 import kotlinx.coroutines.flow.Flow

@@ -1,6 +1,5 @@
-package com.planradar.weatherapptask.domain.usecases
+package com.planradar.weatherapptask.usecases
 
-import com.planradar.weatherapptask.domain.repository.CitiesRepository
 import com.planradar.weatherapptask.domain.repository.WeatherRepository
 import javax.inject.Inject
 

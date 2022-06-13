@@ -2,7 +2,7 @@ package com.planradar.weatherapptask.presentation.features.weather_history
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.planradar.weatherapptask.domain.usecases.GetWeatherHistoryUseCase
+import com.planradar.weatherapptask.usecases.GetWeatherHistoryUseCase
 import com.planradar.weatherapptask.util.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
